@@ -15,5 +15,6 @@ public class Controller {
         private list<Person> performers;
         private Person admin;
         private Person initiator;
+        private int test;
     }
 }
