@@ -19,5 +19,6 @@ public class Controller {
         private Person admin;
         private Person initiator;
         private int test1;
+        private int Ann;
     }
 }
