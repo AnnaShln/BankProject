@@ -1,8 +1,41 @@
-package sample;
+package sample.classes;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+
+import java.io.IOException;
 import java.util.*;
 
 public class Controller {
+
+    @FXML
+    private Button startRegistration;
+
+    @FXML
+    void initialize() {
+        startRegistration.setOnAction(event -> {
+            startRegistration.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/fxmls/registration.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+    }
+
+
+
     class Member {
 
     }
@@ -33,10 +66,10 @@ public class Controller {
             // ищем в листе проект и удаляем его
         }
 
-        public List<Member> showMembers(Project project) {
+        //public List<Member> showMembers(Project project) {
             // вызывает список мемберов и возвращает его
 
-        }
+        //}
 
         public void addMember(Project project, Member member) {
            project.members.add(member);
@@ -68,18 +101,18 @@ public class Controller {
 
         //отложим пока PrintInfo
 
-        public boolean ifProjectHasTag(Project project, String tag) {
+        //public boolean ifProjectHasTag(Project project, String tag) {
             //возвращаем результат contains()
-        }
+        //}
 
-        public boolean ifProjectHasTask(Project project, String task) {
+        //public boolean ifProjectHasTask(Project project, String task) {
             //возвращаем результат contains()
-        }
+        //}
 
-        public boolean ifProjectHasName(Project project, String word) {
+        //public boolean ifProjectHasName(Project project, String word) {
             //разбить его имя split (можно сплитом в еще один список
             // разбить имя проекта и по этому списку уже искать совпадение слова
-        }
+        //}
 
         //надо решить будет ли отдельный класс для поиска или же надо менять концепцию методов ифпроектхэз тратата
         //можно сразу в этих методах реализовать поиск по всем проектам
