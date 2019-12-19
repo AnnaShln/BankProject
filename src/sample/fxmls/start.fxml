@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #783524;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.Controller">
+   <children>
+      <AnchorPane layoutY="180.0" prefHeight="520.0" prefWidth="1000.0" style="-fx-background-color: #dfb08b;">
+         <children>
+            <Button layoutX="244.0" layoutY="290.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Войти" textFill="#dfb08b">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Button>
+            <TextField layoutX="244.0" layoutY="114.0" prefHeight="51.0" prefWidth="512.0" promptText="Логин" style="-fx-background-color: #f7dec5;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <PasswordField layoutX="244.0" layoutY="202.0" prefHeight="51.0" prefWidth="512.0" promptText="Пароль" style="-fx-background-color: #f7dec5;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="startRegistration" layoutX="512.0" layoutY="290.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="318.0" layoutY="51.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#dfb08b">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
