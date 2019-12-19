@@ -1,20 +1,62 @@
 package sample.classes;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
 
-import java.util.*;
+import java.io.IOException;
 
 public class RegistrationController {
-    ObservableList<String> availableChoices = FXCollections.observableArrayList("Студент", "Преподаватель");
+
+   @FXML
+    private TextField loginRegistration;
 
     @FXML
-    private ChoiceBox<String> studentOrTeacher;
+    private PasswordField passwordRegistration;
+
     @FXML
-    private void initialize() {
-        studentOrTeacher.setItems(availableChoices);
+    private Button continueRegistration;
+
+    @FXML
+    private RadioButton radioStudent;
+
+    @FXML
+    private RadioButton radioTeacher;
+
+    @FXML
+    void initialize() {
+        continueRegistration.setOnAction(event -> {
+            continueRegistration.getScene().getWindow().hide();
+            FXMLLoader loader1 = new FXMLLoader();
+            FXMLLoader loader2 = new FXMLLoader();
+            if (radioStudent.isSelected()) {
+                loader1.setLocation(getClass().getResource("/sample/fxmls/studentRegistration.fxml"));
+                try {
+                    loader1.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Parent root = loader1.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.showAndWait();
+            }
+            if (radioTeacher.isSelected()) {
+                loader2.setLocation(getClass().getResource("/sample/fxmls/teacherRegistration.fxml"));
+                try {
+                    loader2.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Parent root = loader2.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.showAndWait();
+            }
+        });
     }
 
 }
