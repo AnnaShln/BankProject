@@ -8,41 +8,32 @@ import java.util.Map;
 public class Project {
     private String name;
     private int id;
-    private String password;
+    private String password; //пароль придумывается при создании проекта?
     private String purpose;
-    Map<String, List<Integer>> tasks = new HashMap<>();
-    private String deadlines;
+    Map<String, List<Integer>> tasks = new HashMap<>(); //я бы сделала просто список
+    private String deadlines; //мне кажется это лучше заменить на статус (в процессе/завершен)
     private String resources;
-    Map<String,List<Integer>> tags = new HashMap<>();
+    Map<String,List<Integer>> tags = new HashMap<>(); //тут я бы тоже просто список сделала
     List<Person> members = new LinkedList<>();
-    List<Project> allProjects = new LinkedList<>();
 
-    public boolean createProject (String name, Integer id, String password, String purpose, List<String> tasks,
-                                  String deadlines, String resources) {
-        Project newOne = new Project();
-        newOne.name = name;
-        newOne.id = id;
-        newOne.password = password;
-        newOne.purpose = purpose;
-        // допишите сюда и на вход
-        return allProjects.add(newOne);
+    //конструктор:
+    Project (String prName, Integer prId, String prPassword, String prPurpose, List<String> prTasks,
+                                  String prDeadlines, String prResources) {
+        name = prName;
+        id = prId;
+        password = prPassword;
+        purpose = prPurpose;
+        //tasks
+        //deadlines
+        resources = prResources;
     }
-
-    public void removeProject(Project project) {
-        // ищем в листе проект и удаляем его
-    }
-
-    //public List<Member> showMembers(Project project) {
-    // вызывает список мемберов и возвращает его
-
-    //}
 
     public void addMember(Project project, Person member) {
         project.members.add(member);
     }
 
     public void removeMember() {
-        //аналогично
+
     }
 
     public void changeStatus(Project project, String newStatus) {
