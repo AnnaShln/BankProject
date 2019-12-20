@@ -14,7 +14,7 @@ public class Project {
     private String deadlines;
     private String resources;
     Map<String,List<Integer>> tags = new HashMap<>();
-    List<Controller.Member> members = new LinkedList<>();
+    List<Person> members = new LinkedList<>();
     List<Project> allProjects = new LinkedList<>();
 
     public boolean createProject (String name, Integer id, String password, String purpose, List<String> tasks,
@@ -37,7 +37,7 @@ public class Project {
 
     //}
 
-    public void addMember(Project project, Controller.Member member) {
+    public void addMember(Project project, Person member) {
         project.members.add(member);
     }
 
