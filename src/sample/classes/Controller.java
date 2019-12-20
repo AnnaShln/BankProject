@@ -34,10 +34,4 @@ public class Controller {
         });
     }
 
-
-
-    class Member {
-
-    }
-
 }
