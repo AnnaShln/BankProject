@@ -6,20 +6,15 @@ import java.util.List;
 public class Person {
     String name;
     int id;
+    String status; //преподаватель/студент
     List<Project> projects = new LinkedList<>();
     //тут должен быть лист с проектами
     //а еще лист с тегами
     public String getName() {
         return name;
     }
-    public void setName(String p_name) {
-        this.name = p_name;
-    }
     public int getId() {
         return id;
-    }
-    public void setId(int p_id) {
-        this.id = p_id;
     }
     class Student extends Person {
         int course;
