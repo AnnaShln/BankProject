@@ -54,10 +54,17 @@ public class BankOfProjects {
         return taggedProjects;
     }
 
-    public void createProject(List<Project> list, String prName, Integer prId, String prPurpose, String prTasks,
+    public void createProject(String prName, Integer prId, String prPurpose, String prTasks,
                               String prDeadlines, String prResources) {
         Project project = new Project(prName,prId,prPurpose,prTasks,prDeadlines,prResources);
-        list.add(project);
+        allProjects.add(project);
     }
-
+    public void createTeacher(String pName, int pId, String pFaculty, String pPosition, String pPassword) {
+        Person.Teacher teacher = new Person.Teacher(pName, pId, pFaculty, pPosition, pPassword);
+        allPeople.add(teacher);
+    }
+    public void createStudent(String pName, int pId, int pCourse, String pGroup, String pInst, String pPassword) {
+        Person.Student student = new Person.Student(pName, pId, pCourse, pGroup, pInst, pPassword);
+        allPeople.add(student);
+    }
 }

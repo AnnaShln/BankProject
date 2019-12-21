@@ -27,7 +27,7 @@ public class Person {
     public void addProject(Project pProject) {
         projects.add(pProject);
     }
-    class Student extends Person {
+    public static class Student extends Person {
         int course;
         String group;
         String inst; //институт (ИКНТ там и тд)
@@ -41,7 +41,7 @@ public class Person {
             password = pPassword;
         }
     }
-    class Teacher extends Person {
+    public static class Teacher extends Person {
         String faculty;
         String position;
         //конструктор:
