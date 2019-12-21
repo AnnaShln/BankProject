@@ -50,7 +50,7 @@ public class Project {
 
     public void addTask(Project project, String newTask) {
         //добавляем в список новую задачу. Кстати, стоит ли реализовывать нам задачи через список, подобно тэгам?
-        //М: мне кажется, что нет, не надо
+        //М: мне кажется, что нет, не надо, ибо не вижу смысла
     }
 
     public void addTag(Project project, String newTag) {
