@@ -31,29 +31,27 @@ public class Project {
     }
 
 
-    public void addMember(Project project, Person member) {
-        project.members.add(member);
+    public void addMember(Person member) {
+        members.add(member);
+    }
+    public void changeStatus(String newStatus) {
+        status = newStatus;
+    }
+    public void changePurpose(String newPurpose) {
+        purpose = newPurpose;
     }
 
-    public void changeStatus(Project project, String newStatus) {
-       // project.status = newStatus;
-    }
-
-    public void changePurpose(Project project, String newPurpose) {
-        project.purpose = newPurpose;
-    }
-
-    public void changeResources(Project project, String newResources) {
-      project.resources = newResources;
+    public void changeResources(String newResources) {
+        resources = newResources;
     }
 
     public void addTask(Project project, String newTask) {
         project.tasks = newTask;
-        //добавляем в список новую задачу. Кстати, стоит ли реализовывать нам задачи через список, подобно тэгам?
-        //М: мне кажется, что нет, не надо, ибо не вижу смысла
     }
 
-    public void addTag(Project project, String newTag) {project.tags.add(newTag); }
+    public void addTag(Project project, String newTag) {
+        project.tags.add(newTag);
+    }
 
     //отложим пока PrintInfo
 
