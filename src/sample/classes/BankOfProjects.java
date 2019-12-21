@@ -67,4 +67,8 @@ public class BankOfProjects {
         Person.Student student = new Person.Student(pName, pId, pCourse, pGroup, pInst, pPassword);
         allPeople.add(student);
     }
+    public void empty()
+    {
+
+    }
 }
