@@ -10,10 +10,11 @@ public class Project {
     private int id;
     private String password; //пароль придумывается при создании проекта?
     private String purpose;
-    Map<String, List<Integer>> tasks = new HashMap<>(); //я бы сделала просто список
-    private String deadlines; //мне кажется это лучше заменить на статус (в процессе/завершен)
+    private String status;
+    List<String> tasks = new LinkedList<>();
+    private String deadlines;
     private String resources;
-    Map<String,List<Integer>> tags = new HashMap<>(); //тут я бы тоже просто список сделала
+    List<String> tags = new LinkedList<>();
     List<Person> members = new LinkedList<>();
 
     //конструктор:

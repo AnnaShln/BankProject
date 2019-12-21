@@ -46,4 +46,5 @@ public class Person {
     public void removeProject(Project project) {
         // ищем в листе проект и удаляем его
     }
+
 }
