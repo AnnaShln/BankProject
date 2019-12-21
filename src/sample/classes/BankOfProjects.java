@@ -1,9 +1,7 @@
 package sample.classes;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 public class BankOfProjects {
     List<Project> allProjects = new LinkedList<>();
@@ -20,13 +18,13 @@ public class BankOfProjects {
     }
 
     public List<Person> pNameSearch(String pName) {
-        List<Person> taggedPeople = new LinkedList<>();
+        List<Person> People = new LinkedList<>();
         for (Person part: allPeople) {
             if (part.name.indexOf(pName) != -1) {
-                taggedPeople.add(part);
+                People.add(part);
             }
         }
-        return taggedPeople;
+        return People;
     }
     public List<Project> prNameSearch(String prName) {
         List<Project>  Projects = new LinkedList<>();

@@ -9,31 +9,8 @@ public class Project {
     public String getName() {
         return name;
     }
-
     String name;
-
-    public int getId() {
-        return id;
-    }
-
     private int id;
-
-    public String getPurpose() {
-        return purpose;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getDeadlines() {
-        return deadlines;
-    }
-
-    public String getResources() {
-        return resources;
-    }
-
     private String purpose;
     private String status;
     String tasks;
