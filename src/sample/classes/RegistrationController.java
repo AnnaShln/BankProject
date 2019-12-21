@@ -33,7 +33,7 @@ public class RegistrationController {
             FXMLLoader loader1 = new FXMLLoader();
             FXMLLoader loader2 = new FXMLLoader();
             if (radioStudent.isSelected()) {
-                loader1.setLocation(getClass().getResource("/sample/fxmls/studentRegistration.fxml"));
+                loader1.setLocation(getClass().getResource("../sample/fxmls/studentRegistration.fxml"));
                 try {
                     loader1.load();
                 } catch (IOException e) {
@@ -45,7 +45,7 @@ public class RegistrationController {
                 stage.showAndWait();
             }
             if (radioTeacher.isSelected()) {
-                loader2.setLocation(getClass().getResource("/sample/fxmls/teacherRegistration.fxml"));
+                loader2.setLocation(getClass().getResource("../sample/fxmls/teacherRegistration.fxml"));
                 try {
                     loader2.load();
                 } catch (IOException e) {

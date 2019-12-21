@@ -38,7 +38,7 @@ public class Project {
     }
 
     public void changeStatus(Project project, String newStatus) {
-        project.status = newStatus;
+       // project.status = newStatus;
     }
 
     public void changePurpose(Project project, String newPurpose) {
