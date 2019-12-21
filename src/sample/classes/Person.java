@@ -5,14 +5,21 @@ import java.util.List;
 
 public class Person {
     String name;
-    int id;
-    List<Project> projects = new LinkedList<>();
-    public static List<String> tags = new LinkedList<>();
+    private int id;
+    private String password;
+    private List<Project> projects = new LinkedList<>();
+    List<String> tags = new LinkedList<>();
     public String getName() {
         return name;
     }
     public int getId() {
         return id;
+    }
+    public List<Project> getProjects() {
+        return projects;
+    }
+    public List<String> getTags() {
+        return tags;
     }
     public void addTag(String pTag) {
         tags.add(pTag);
@@ -25,24 +32,25 @@ public class Person {
         String group;
         String inst; //институт (ИКНТ там и тд)
         //конструктор:
-        Student(String pName, int pId, int pCourse, String pGroup, String pInst) {
+        Student(String pName, int pId, int pCourse, String pGroup, String pInst, String pPassword) {
             name = pName;
             id = pId;
             course = pCourse;
             group = pGroup;
             inst = pInst;
+            password = pPassword;
         }
-        //метод вывода инфы по студенту
     }
     class Teacher extends Person {
         String faculty;
         String position;
         //конструктор:
-        Teacher(String pName, int pId, String pFaculty, String pPosition) {
+        Teacher(String pName, int pId, String pFaculty, String pPosition, String pPassword) {
             name = pName;
             id = pId;
             faculty = pFaculty;
             position = pPosition;
+            password = pPassword;
         }
     }
     public void removeProject(Project pProject) {
