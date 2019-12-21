@@ -4,16 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Person {
-    public String name;
-    public int id;
-    public String password;
-    public List<Project> projects = new LinkedList<>();
-    public List<String> tags = new LinkedList<>();
+    String name;
+    String password;
+    List<Project> projects = new LinkedList<>();
+    List<String> tags = new LinkedList<>();
     public String getName() {
         return name;
-    }
-    public int getId() {
-        return id;
     }
     public List<Project> getProjects() {
         return projects;
@@ -32,9 +28,8 @@ public class Person {
         String group;
         String inst; //институт (ИКНТ там и тд)
         //конструктор:
-        Student(String pName, int pId, int pCourse, String pGroup, String pInst, String pPassword) {
+        Student(String pName, int pCourse, String pGroup, String pInst, String pPassword) {
             name = pName;
-            id = pId;
             course = pCourse;
             group = pGroup;
             inst = pInst;
@@ -45,9 +40,8 @@ public class Person {
         String faculty;
         String position;
         //конструктор:
-        Teacher(String pName, int pId, String pFaculty, String pPosition, String pPassword) {
+        Teacher(String pName, String pFaculty, String pPosition, String pPassword) {
             name = pName;
-            id = pId;
             faculty = pFaculty;
             position = pPosition;
             password = pPassword;
