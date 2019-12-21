@@ -4,38 +4,80 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: #783524;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.Controller">
    <children>
-      <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noviy-god42.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="183.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noviy-god42.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1224.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noviy-god42.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1062.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/noviy-god42.png" />
+         </image></ImageView>
+      <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
          <children>
-            <Button fx:id="signIn" layoutX="444.0" layoutY="294.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Войти" textFill="#dfb08b">
+            <Button fx:id="signIn" layoutX="444.0" layoutY="294.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Войти" textFill="#f7f9f2">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Button>
-            <TextField fx:id="login" layoutX="444.0" layoutY="116.0" prefHeight="51.0" prefWidth="512.0" promptText="Логин" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="login" layoutX="444.0" layoutY="116.0" prefHeight="51.0" prefWidth="512.0" promptText="Логин" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="password" layoutX="444.0" layoutY="204.0" prefHeight="51.0" prefWidth="512.0" promptText="Пароль" style="-fx-background-color: #f7dec5;">
+            <PasswordField fx:id="password" layoutX="444.0" layoutY="204.0" prefHeight="51.0" prefWidth="512.0" promptText="Пароль" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font size="24.0" />
                </font>
             </PasswordField>
-            <Button fx:id="startRegistration" layoutX="712.0" layoutY="294.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
+            <Button fx:id="startRegistration" layoutX="712.0" layoutY="294.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#f7f9f2">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Button>
+            <ImageView fitHeight="123.0" fitWidth="306.0" layoutX="559.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kolokol123.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="196.0" fitWidth="266.0" layoutX="1097.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ng-18.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="413.0" fitWidth="317.0" layoutX="38.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/noviy-god3.png" />
+               </image>
+            </ImageView>
+            <Text fill="#783524" layoutX="515.0" layoutY="-77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Банк Проектов" wrappingWidth="422.91253662109375">
+               <font>
+                  <Font name="Calibri Bold" size="64.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
-      <Label layoutX="518.0" layoutY="54.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#dfb08b">
+      <Label layoutX="883.0" layoutY="118.0" text="Новогодняя версия!" textFill="#f0d331">
          <font>
-            <Font name="System Bold" size="48.0" />
+            <Font name="Calibri Italic" size="18.0" />
          </font>
       </Label>
    </children>

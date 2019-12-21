@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 import java.io.IOException;
 
 public class Controller{
@@ -15,6 +17,9 @@ public class Controller{
 
     @FXML
     private Button signIn;
+
+    @FXML
+    private ImageView startImage;
 
     private UtilController controller = UtilController.getInstance();
 
