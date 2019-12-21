@@ -7,8 +7,23 @@ import java.util.Map;
 
 public class BankOfProjects {
     List<Project> allProjects = new LinkedList<>();
-    List<Project> allPeople = new LinkedList<>();
-    Map<String,List<Person>> taggedPeople = new HashMap<>(); //ключ - тэг, значение - список людей с указанным тэгом
-    Map<String,List<Person>> taggedProjects = new HashMap<>(); //то же самое с проектами
-
+    List<Person> allPeople = new LinkedList<>();
+    public List<Person> pTagSearch(String pTag) {
+        List<Person> taggedPeople = new LinkedList<>();
+        for (Person part: allPeople) {
+            if (part.tags.contains(pTag)) {
+                taggedPeople.add(part);
+            }
+        }
+        return taggedPeople;
+    }
+    public List<Person> pNameSearch(String pName) {
+        List<Person> taggedPeople = new LinkedList<>();
+        for (Person part: allPeople) {
+            if (part.name.indexOf(pName) != -1) {
+                taggedPeople.add(part);
+            }
+        }
+        return taggedPeople;
+    }
 }

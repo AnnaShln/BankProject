@@ -6,15 +6,19 @@ import java.util.List;
 public class Person {
     String name;
     int id;
-    String status; //преподаватель/студент
     List<Project> projects = new LinkedList<>();
-    //тут должен быть лист с проектами
-    //а еще лист с тегами
+    public static List<String> tags = new LinkedList<>();
     public String getName() {
         return name;
     }
     public int getId() {
         return id;
+    }
+    public void addTag(String pTag) {
+        tags.add(pTag);
+    }
+    public void addProject(Project pProject) {
+        projects.add(pProject);
     }
     class Student extends Person {
         int course;
@@ -40,11 +44,9 @@ public class Person {
             faculty = pFaculty;
             position = pPosition;
         }
-        //String subject;
-        //метод вывода инфы по преподу
     }
-    public void removeProject(Project project) {
-        // ищем в листе проект и удаляем его
+    public void removeProject(Project pProject) {
+        int index = projects.indexOf(pProject);
+        projects.remove(index);
     }
-
 }
