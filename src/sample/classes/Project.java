@@ -37,22 +37,24 @@ public class Project {
     }
 
     public void changeStatus(Project project, String newStatus) {
-
+        project.status = newStatus;
     }
 
     public void changePurpose(Project project, String newPurpose) {
-
+        project.purpose = newPurpose;
     }
 
     public void changeResources(Project project, String newResources) {
-
+      project.resources = newResources;
     }
 
     public void addTask(Project project, String newTask) {
         //добавляем в список новую задачу. Кстати, стоит ли реализовывать нам задачи через список, подобно тэгам?
+        //М: мне кажется, что нет, не надо
     }
 
     public void addTag(Project project, String newTag) {
+
         //добавляем в список новый тэг
     }
 
