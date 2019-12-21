@@ -5,7 +5,7 @@ import javafx.scene.control.*;
 
 public class RegistrationController {
 
-    Controller controller = new Controller();
+    private UtilController controller = UtilController.getInstance();
 
    @FXML
     private TextField loginRegistration;

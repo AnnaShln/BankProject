@@ -1,5 +1,8 @@
 package sample.classes;
 
+import sample.classes.Person;
+import sample.classes.Project;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.io.*;

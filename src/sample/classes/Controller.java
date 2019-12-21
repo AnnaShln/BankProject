@@ -16,32 +16,16 @@ public class Controller{
     @FXML
     private Button signIn;
 
+    private UtilController controller = UtilController.getInstance();
+
     @FXML
     void initialize() {
         startRegistration.setOnAction(event ->
-                openNewWindow("/sample/fxmls/registration.fxml", startRegistration)
+                controller.openNewWindow("/sample/fxmls/registration.fxml", startRegistration)
         );
 
         signIn.setOnAction(event ->
-                openNewWindow("/sample/fxmls/mainWindow.fxml", signIn)
+                controller.openNewWindow("/sample/fxmls/mainWindow.fxml", signIn)
         );
-    }
-
-    public void openNewWindow (String window, Button button) {
-        button.getScene().getWindow().hide();
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(window));
-
-        try {
-            loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.showAndWait();
     }
 }
