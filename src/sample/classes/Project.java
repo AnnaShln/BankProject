@@ -11,8 +11,29 @@ public class Project {
     }
 
     String name;
+
+    public int getId() {
+        return id;
+    }
+
     private int id;
-    private String password; //пароль придумывается при создании проекта?
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getDeadlines() {
+        return deadlines;
+    }
+
+    public String getResources() {
+        return resources;
+    }
+
     private String purpose;
     private String status;
     String tasks;
@@ -22,11 +43,10 @@ public class Project {
     List<Person> members = new LinkedList<>();
 
     //конструктор:
-    Project (String prName, Integer prId, String prPassword, String prPurpose, String prTasks,
+    Project (String prName, Integer prId, String prPurpose, String prTasks,
                                   String prDeadlines, String prResources) {
         name = prName;
         id = prId;
-        password = prPassword;
         purpose = prPurpose;
         tasks = prTasks;
         deadlines = prDeadlines;
