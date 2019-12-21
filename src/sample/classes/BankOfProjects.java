@@ -2,7 +2,6 @@ package sample.classes;
 
 import sample.classes.Person;
 import sample.classes.Project;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.io.*;
@@ -21,9 +20,9 @@ public class BankOfProjects {
         OnlineUser = pOnline;
     }
 
-    public void createProject(List<Project> list, String prName, Integer prId, String prPurpose, String prTasks,
-                              String prDeadlines, String prResources) {
-        Project project = new Project(prName,prId,prPurpose,prTasks,prDeadlines,prResources);
+    public void createProject(List<Project> list, String prName, String prPurpose, String prTasks,
+                              String prDeadlines, String prResources, String prStatus) {
+        Project project = new Project(prName, prStatus, prPurpose,prTasks,prDeadlines,prResources);
         list.add(project);
     }
 
@@ -88,7 +87,7 @@ public class BankOfProjects {
             writer.write(part.getDeadlines() + System.getProperty("line.separator"));
             writer.write(part.getPurpose() + System.getProperty("line.separator"));
             writer.write(part.getResources() + System.getProperty("line.separator"));
-            writer.write(part.getStatus()+ System.getProperty("line.separator"))
+            writer.write(part.getStatus()+ System.getProperty("line.separator"));
         }
         writer.close();
     }
@@ -119,6 +118,5 @@ public class BankOfProjects {
         fr.close();
 
 
-    }
     }
 }

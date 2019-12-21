@@ -37,7 +37,7 @@ public class Project {
     }
 
     //конструктор:
-    Project (String prName, String prPurpose, String prStatus, String prTasks,
+    Project (String prName,  String prStatus,String prPurpose, String prTasks,
                                   String prDeadlines, String prResources) {
         name = prName;
         purpose = prPurpose;
