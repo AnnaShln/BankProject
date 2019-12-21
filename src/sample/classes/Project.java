@@ -6,35 +6,35 @@ import java.util.List;
 import java.util.Map;
 
 public class Project {
-    private String name;
+    public String getName() {
+        return name;
+    }
+
+    String name;
     private int id;
     private String password; //пароль придумывается при создании проекта?
     private String purpose;
     private String status;
-    List<String> tasks = new LinkedList<>();
+    String tasks;
     private String deadlines;
     private String resources;
     List<String> tags = new LinkedList<>();
     List<Person> members = new LinkedList<>();
 
     //конструктор:
-    Project (String prName, Integer prId, String prPassword, String prPurpose, List<String> prTasks,
+    Project (String prName, Integer prId, String prPassword, String prPurpose, String prTasks,
                                   String prDeadlines, String prResources) {
         name = prName;
         id = prId;
         password = prPassword;
         purpose = prPurpose;
-        //tasks
-        //deadlines
+        tasks = prTasks;
+        deadlines = prDeadlines;
         resources = prResources;
     }
 
     public void addMember(Project project, Person member) {
         project.members.add(member);
-    }
-
-    public void removeMember() {
-
     }
 
     public void changeStatus(Project project, String newStatus) {
@@ -50,6 +50,7 @@ public class Project {
     }
 
     public void addTask(Project project, String newTask) {
+        project.tasks   = newTask;
         //добавляем в список новую задачу. Кстати, стоит ли реализовывать нам задачи через список, подобно тэгам?
         //М: мне кажется, что нет, не надо, ибо не вижу смысла
     }
