@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Person {
-    String name;
-    private int id;
-    private String password;
-    private List<Project> projects = new LinkedList<>();
-    List<String> tags = new LinkedList<>();
+    public String name;
+    public int id;
+    public String password;
+    public List<Project> projects = new LinkedList<>();
+    public List<String> tags = new LinkedList<>();
     public String getName() {
         return name;
     }
