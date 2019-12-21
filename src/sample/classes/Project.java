@@ -37,10 +37,11 @@ public class Project {
     }
 
     //конструктор:
-    Project (String prName, String prPurpose, String prTasks,
+    Project (String prName, String prPurpose, String prStatus, String prTasks,
                                   String prDeadlines, String prResources) {
         name = prName;
         purpose = prPurpose;
+        status = prStatus;
         tasks = prTasks;
         deadlines = prDeadlines;
         resources = prResources;
