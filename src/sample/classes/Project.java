@@ -50,30 +50,14 @@ public class Project {
     }
 
     public void addTask(Project project, String newTask) {
-        project.tasks   = newTask;
+        project.tasks = newTask;
         //добавляем в список новую задачу. Кстати, стоит ли реализовывать нам задачи через список, подобно тэгам?
         //М: мне кажется, что нет, не надо, ибо не вижу смысла
     }
 
-    public void addTag(Project project, String newTag) {
-
-        //добавляем в список новый тэг
-    }
+    public void addTag(Project project, String newTag) {project.tags.add(newTag); }
 
     //отложим пока PrintInfo
-
-    //public boolean ifProjectHasTag(Project project, String tag) {
-    //возвращаем результат contains()
-    //}
-
-    //public boolean ifProjectHasTask(Project project, String task) {
-    //возвращаем результат contains()
-    //}
-
-    //public boolean ifProjectHasName(Project project, String word) {
-    //разбить его имя split (можно сплитом в еще один список
-    // разбить имя проекта и по этому списку уже искать совпадение слова
-    //}
 
     //надо решить будет ли отдельный класс для поиска или же надо менять концепцию методов ифпроектхэз тратата
     //можно сразу в этих методах реализовать поиск по всем проектам
