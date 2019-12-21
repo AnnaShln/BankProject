@@ -66,11 +66,6 @@
             <Font name="Calibri" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="registrationFromMainWindow" layoutX="1133.0" layoutY="101.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #f7dec5;" text="Зарегистрироваться" textFill="#783524">
-         <font>
-            <Font name="Calibri" size="24.0" />
-         </font>
-      </Button>
       <AnchorPane layoutX="696.0" layoutY="1.0" prefHeight="175.0" prefWidth="412.0" style="-fx-background-color: #dfb08b;">
          <children>
             <Text fx:id="nameInMainWindow" fill="#783524" layoutX="24.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="363.2">
@@ -83,7 +78,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <TextField fx:id="tagField" layoutX="13.0" layoutY="121.0" prefHeight="51.0" prefWidth="223.0" promptText="Тег">
+            <TextField fx:id="tagField" layoutX="13.0" layoutY="121.0" prefHeight="51.0" prefWidth="223.0" promptText="Я шарю в ...">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
@@ -95,7 +90,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="createProject" layoutX="428.0" layoutY="102.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #f7dec5;" text="Создать Проект" textFill="#783524">
+      <Button fx:id="createProject" layoutX="1133.0" layoutY="101.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #f7dec5;" text="Создать Проект" textFill="#783524">
          <font>
             <Font name="Calibri" size="24.0" />
          </font>

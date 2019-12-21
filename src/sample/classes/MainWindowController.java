@@ -33,9 +33,6 @@ public class MainWindowController {
                 controller.openNewWindow("/sample/fxmls/start.fxml", logOut)
         );
 
-        registrationFromMainWindow.setOnAction(event ->
-                controller.openNewWindow("/sample/fxmls/registration.fxml", registrationFromMainWindow)
-        );
         nameInMainWindow.setText(name);
         textProjects.setText(text);
     }
