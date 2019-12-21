@@ -3,13 +3,14 @@ package sample.classes;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.*;
+import java.nio.file.*;
 
 public class BankOfProjects {
     List<Project> allProjects = new LinkedList<>();
     List<Person> allPeople = new LinkedList<>();
     Person OnlineUser;
-    private File dirPeople = new File("People");
-    private File dirProjects = new File("Projects");
+    private File filePeople = new File("People");
+    private File fileProjects = new File("Projects.txt");
 
     public void setOnlineUser(Person pOnline) {
         OnlineUser = pOnline;
@@ -54,9 +55,9 @@ public class BankOfProjects {
         return taggedProjects;
     }
 
-    public void createProject(String prName, Integer prId, String prPurpose, String prTasks,
+    public void createProject(String prName, String prPurpose, String prTasks,
                               String prDeadlines, String prResources) {
-        Project project = new Project(prName,prId,prPurpose,prTasks,prDeadlines,prResources);
+        Project project = new Project(prName,prPurpose,prTasks,prDeadlines,prResources);
         allProjects.add(project);
     }
     public void createTeacher(String pName, String pFaculty, String pPosition, String pPassword) {
@@ -66,5 +67,19 @@ public class BankOfProjects {
     public void createStudent(String pName, int pCourse, String pGroup, String pInst, String pPassword) {
         Person.Student student = new Person.Student(pName, pCourse, pGroup, pInst, pPassword);
         allPeople.add(student);
+    }
+
+    public void projectsToFile() throws Exception
+    {
+        FileWriter writer = new FileWriter("Projects.txt");
+        String sep = "*";
+        for(Project part: allProjects) {
+            writer.write(part.getName() + System.getProperty("line.separator"));
+            writer.write(part.getDeadlines() + System.getProperty("line.separator"));
+            writer.write(part.getPurpose() + System.getProperty("line.separator"));
+            writer.write(part.getResources() + System.getProperty("line.separator"));
+            writer.write(sep + System.getProperty("line.separator"));
+        }
+        writer.close();
     }
 }

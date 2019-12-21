@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Project {
-    public String getName() {
-        return name;
-    }
+
     String name;
-    private int id;
     private String purpose;
     private String status;
     String tasks;
@@ -19,11 +16,30 @@ public class Project {
     List<String> tags = new LinkedList<>();
     List<Person> members = new LinkedList<>();
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getDeadlines() {
+        return deadlines;
+    }
+
+    public String getResources() {
+        return resources;
+    }
+
     //конструктор:
-    Project (String prName, Integer prId, String prPurpose, String prTasks,
+    Project (String prName, String prPurpose, String prTasks,
                                   String prDeadlines, String prResources) {
         name = prName;
-        id = prId;
         purpose = prPurpose;
         tasks = prTasks;
         deadlines = prDeadlines;
