@@ -7,6 +7,12 @@ public class BankOfProjects {
     List<Project> allProjects = new LinkedList<>();
     List<Person> allPeople = new LinkedList<>();
 
+    public void createProject(List<Project> list, String prName, Integer prId, String prPurpose, String prTasks,
+                              String prDeadlines, String prResources) {
+        Project project = new Project(prName,prId,prPurpose,prTasks,prDeadlines,prResources);
+        list.add(project);
+    }
+
     public List<Person> pTagSearch(String pTag) {
         List<Person> taggedPeople = new LinkedList<>();
         for (Person part: allPeople) {

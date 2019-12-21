@@ -1,9 +1,14 @@
 package sample.classes;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
-public class MainWindowController{
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MainWindowController implements Initializable{
 
     Controller controller = new Controller();
 
@@ -14,7 +19,10 @@ public class MainWindowController{
     private Button registrationFromMainWindow;
 
     @FXML
-    void initialize() {
+    private Text nameInMainWindow;
+
+    @FXML
+    public void initialize(URL location, ResourceBundle resources) {
         logOut.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/start.fxml", logOut)
         );
@@ -22,6 +30,8 @@ public class MainWindowController{
         registrationFromMainWindow.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/registration.fxml", registrationFromMainWindow)
         );
+        nameInMainWindow.setText(name);
     }
 
+    String name = "Рандомное имя";
 }
