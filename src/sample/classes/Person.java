@@ -57,4 +57,7 @@ public class Person {
         int index = projects.indexOf(pProject);
         projects.remove(index);
     }
+
+    //нужно создать функцию для записи списка проектов в файл
+
 }

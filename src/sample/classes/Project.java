@@ -30,6 +30,7 @@ public class Project {
         resources = prResources;
     }
 
+
     public void addMember(Project project, Person member) {
         project.members.add(member);
     }

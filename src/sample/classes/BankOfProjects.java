@@ -53,4 +53,11 @@ public class BankOfProjects {
         }
         return taggedProjects;
     }
+
+    public void createProject(List<Project> list, String prName, Integer prId, String prPurpose, String prTasks,
+                              String prDeadlines, String prResources) {
+        Project project = new Project(prName,prId,prPurpose,prTasks,prDeadlines,prResources);
+        list.add(project);
+    }
+
 }
