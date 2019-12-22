@@ -27,10 +27,10 @@ public class BankOfProjects {
         }
     }
 
-    public void createProject(List<Project> list, String prName, String prPurpose, String prTasks,
+    public void createProject(String prName, String prPurpose, String prTasks,
                               String prDeadlines, String prResources, String prStatus) {
         Project project = new Project(prName, prStatus, prPurpose,prTasks,prDeadlines,prResources);
-        list.add(project);
+        allProjects.add(project);
     }
 
     public List<Person> pTagSearch(String pTag) {
@@ -72,11 +72,6 @@ public class BankOfProjects {
         return taggedProjects;
     }
 
-    public void createProject(String prName, String prPurpose, String prStatus,String prTasks,
-                              String prDeadlines, String prResources) {
-        Project project = new Project(prName,prPurpose, prStatus, prTasks,prDeadlines,prResources);
-        allProjects.add(project);
-    }
     public void createTeacher(String pName, String pFaculty, String pPosition, String pPassword) {
         Person.Teacher teacher = new Person.Teacher(pName, pFaculty, pPosition, pPassword);
         allPeople.add(teacher);
