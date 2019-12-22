@@ -10,12 +10,12 @@
     <children>
         <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
             <children>
-                <TextField layoutX="444.0" layoutY="137.0" prefHeight="51.0" prefWidth="512.0" promptText="Кафедра" style="-fx-background-color: #f7dec5;">
+                <TextField fx:id="facultyField" layoutX="444.0" layoutY="137.0" prefHeight="51.0" prefWidth="512.0" promptText="Кафедра" style="-fx-background-color: #f7dec5;">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button layoutX="578.0" layoutY="312.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
+                <Button fx:id="finishRegistration2" layoutX="578.0" layoutY="312.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
                     <font>
                         <Font name="Calibri" size="24.0" />
                     </font>
@@ -25,7 +25,7 @@
                         <Font name="Calibri" size="36.0" />
                     </font>
                 </Label>
-            <TextField layoutX="444.0" layoutY="226.0" prefHeight="51.0" prefWidth="512.0" promptText="Должность" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="positionField" layoutX="444.0" layoutY="226.0" prefHeight="51.0" prefWidth="512.0" promptText="Должность" style="-fx-background-color: #f7dec5;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>

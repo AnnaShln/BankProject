@@ -24,16 +24,18 @@ public class Person {
         projects.add(pProject);
     }
     public static class Student extends Person {
-        int course;
+        String branch;
+        String course;
         String group;
         String inst; //институт (ИКНТ там и тд)
         //конструктор:
-        Student(String pName, int pCourse, String pGroup, String pInst, String pPassword) {
+        Student(String pName, String pCourse, String pGroup, String pInst, String pPassword, String pBranch) {
             name = pName;
             course = pCourse;
             group = pGroup;
             inst = pInst;
             password = pPassword;
+            branch = pBranch;
         }
     }
     public static class Teacher extends Person {

@@ -16,8 +16,10 @@ public class BankOfProjects {
     private File filePeople = new File("People");
     private File fileProjects = new File("Projects.txt");
 
-    public void setOnlineUser(Person pOnline) {
-        OnlineUser = pOnline;
+    public void setOnlineUser(String onlineName, String onlinePassword) {
+        for (Person part: allPeople) {
+            if (part.name.equals(onlineName) && part.password.equals(onlinePassword)) OnlineUser = part;
+        }
     }
 
     public void createProject(List<Project> list, String prName, String prPurpose, String prTasks,
@@ -74,8 +76,9 @@ public class BankOfProjects {
         Person.Teacher teacher = new Person.Teacher(pName, pFaculty, pPosition, pPassword);
         allPeople.add(teacher);
     }
-    public void createStudent(String pName, int pCourse, String pGroup, String pInst, String pPassword) {
-        Person.Student student = new Person.Student(pName, pCourse, pGroup, pInst, pPassword);
+    public void createStudent(String pName, String pCourse, String pGroup,
+                              String pInst, String pPassword, String pBranch) {
+        Person.Student student = new Person.Student(pName, pCourse, pGroup, pInst, pPassword, pBranch);
         allPeople.add(student);
     }
 

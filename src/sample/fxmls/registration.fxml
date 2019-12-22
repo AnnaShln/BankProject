@@ -13,7 +13,7 @@
     <children>
         <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
             <children>
-                <TextField fx:id="loginRegistration" layoutX="444.0" layoutY="113.0" prefHeight="51.0" prefWidth="512.0" promptText="Логин" style="-fx-background-color: #f7dec5;">
+                <TextField fx:id="loginRegistration" layoutX="444.0" layoutY="113.0" prefHeight="51.0" prefWidth="512.0" promptText="Имя" style="-fx-background-color: #f7dec5;">
                     <font>
                         <Font size="24.0" />
                     </font>
