@@ -1,27 +1,26 @@
 package sample.classes;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-import javafx.scene.image.Image;
-import java.io.IOException;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class Controller{
+
+        @FXML
+    private Button signIn;
+
+    @FXML
+    private TextField login;
+
+    @FXML
+    private PasswordField password;
 
     @FXML
     private Button startRegistration;
 
-    @FXML
-    private Button signIn;
-
-    @FXML
-    private ImageView startImage;
-
     private UtilController controller = UtilController.getInstance();
+    public BankOfProjects bankOfProjects = new BankOfProjects();
 
     @FXML
     void initialize() {
@@ -29,8 +28,16 @@ public class Controller{
                 controller.openNewWindow("/sample/fxmls/registration.fxml", startRegistration)
         );
 
-        signIn.setOnAction(event ->
-                controller.openNewWindow("/sample/fxmls/mainWindow.fxml", signIn)
-        );
+        signIn.setOnAction(event -> {
+            bankOfProjects.addAdmin();
+            String loginText = login.getText();
+            String passwordText = password.getText();
+            if (!loginText.equals("") && !passwordText.equals("")) {
+                bankOfProjects.setOnlineUser(login.getText(),password.getText());
+            }
+            controller.openNewWindow("/sample/fxmls/mainWindow.fxml", signIn);
+            System.out.println(bankOfProjects.OnlineUser.name);
+            System.out.println(bankOfProjects.OnlineUser.password);
+        });
     }
 }
