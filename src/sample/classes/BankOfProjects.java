@@ -1,20 +1,25 @@
 package sample.classes;
 
-import sample.classes.Person;
-import sample.classes.Project;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.*;
 import java.io.FileReader;
 import java.util.Scanner;
-import java.nio.file.*;
 
 public class BankOfProjects {
     List<Project> allProjects = new LinkedList<>();
     List<Person> allPeople = new LinkedList<>();
-    Person OnlineUser;
+    public Person OnlineUser;
     private File filePeople = new File("People");
     private File fileProjects = new File("Projects.txt");
+
+    //admin login: totally, password: spice
+    Person.Teacher admin = new Person.Teacher("totally","0",
+            "0","spice");
+
+    public void addAdmin() {
+        allPeople.add(admin);
+    }
 
     public void setOnlineUser(String onlineName, String onlinePassword) {
         for (Person part: allPeople) {

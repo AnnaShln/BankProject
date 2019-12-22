@@ -8,7 +8,6 @@ import javafx.scene.text.Text;
 public class MainWindowController {
 
     private UtilController controller = UtilController.getInstance();
-    private BankOfProjects bankOfProjects = new BankOfProjects();
 
     @FXML
     private Button logOut;
@@ -33,7 +32,7 @@ public class MainWindowController {
                 controller.openNewWindow("/sample/fxmls/createProject.fxml", createProject)
         );
 
-        nameInMainWindow.setText(bankOfProjects.OnlineUser.name);
+        //nameInMainWindow.setText(start.bankOfProjects.OnlineUser.name);
         textProjects.setText(text);
     }
 

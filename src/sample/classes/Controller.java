@@ -1,17 +1,9 @@
 package sample.classes;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-import javafx.scene.image.Image;
-import java.io.IOException;
-import java.util.ResourceBundle;
 
 public class Controller{
 
@@ -28,7 +20,7 @@ public class Controller{
     private Button startRegistration;
 
     private UtilController controller = UtilController.getInstance();
-    private BankOfProjects bankOfProjects = new BankOfProjects();
+    public BankOfProjects bankOfProjects = new BankOfProjects();
 
     @FXML
     void initialize() {
@@ -37,9 +29,15 @@ public class Controller{
         );
 
         signIn.setOnAction(event -> {
+            bankOfProjects.addAdmin();
+            String loginText = login.getText();
+            String passwordText = password.getText();
+            if (!loginText.equals("") && !passwordText.equals("")) {
+                bankOfProjects.setOnlineUser(login.getText(),password.getText());
+            }
             controller.openNewWindow("/sample/fxmls/mainWindow.fxml", signIn);
-            bankOfProjects.setOnlineUser(login.getText(),password.getText());
-        }
-        );
+            System.out.println(bankOfProjects.OnlineUser.name);
+            System.out.println(bankOfProjects.OnlineUser.password);
+        });
     }
 }

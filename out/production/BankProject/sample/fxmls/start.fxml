@@ -31,14 +31,14 @@
          <image>
             <Image url="@../images/noviy-god42.png" />
          </image></ImageView>
-      <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
+      <AnchorPane layoutY="179.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
          <children>
             <Button fx:id="signIn" layoutX="444.0" layoutY="294.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Войти" textFill="#f7f9f2">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Button>
-            <TextField fx:id="login" layoutX="444.0" layoutY="116.0" prefHeight="51.0" prefWidth="512.0" promptText="Логин" style="-fx-background-color: #f7f9f2;">
+            <TextField fx:id="login" layoutX="444.0" layoutY="116.0" prefHeight="51.0" prefWidth="512.0" promptText="Имя" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font size="24.0" />
                </font>
@@ -63,7 +63,7 @@
                   <Image url="@../images/ng-18.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="413.0" fitWidth="317.0" layoutX="38.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="413.0" fitWidth="317.0" layoutX="28.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/noviy-god3.png" />
                </image>
@@ -75,7 +75,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <Label layoutX="883.0" layoutY="118.0" text="Новогодняя версия!" textFill="#f0d331">
+      <Label layoutX="883.0" layoutY="118.0" text="New Year Edition" textFill="#f0d331">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
