@@ -11,7 +11,7 @@ public class Project {
     private String deadlines;
     private String resources;
     List<String> tags = new LinkedList<>();
-    List<Person> members = new LinkedList<>();
+    public static List<Person> members = new LinkedList<>();
 
     public String getName() {
         return name;
@@ -41,5 +41,12 @@ public class Project {
 
     static public void addTag(Project project, String newTag) {
         project.tags.add(newTag);
+        for (Person part: members)
+        {
+            if (!(part.tags.contains(newTag)))
+            {
+                part.tags.add(newTag);
+            }
+        }
     }
 }
