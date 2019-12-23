@@ -50,6 +50,12 @@ public class Project {
 
     public void addMember(Person member) {
         members.add(member);
+        for (String part: tags) {
+            if (!(member.tags.contains(part)))
+            {
+                member.tags.add(part);
+            }
+        }
     }
     public void changeStatus(String newStatus) {
         status = newStatus;
@@ -68,6 +74,11 @@ public class Project {
 
     public void addTag(Project project, String newTag) {
         project.tags.add(newTag);
+        for (Person part: members) {
+            if (!(part.tags.contains(newTag))) {
+                part.tags.add(newTag);
+            }
+        }
     }
 
     //отложим пока PrintInfo
