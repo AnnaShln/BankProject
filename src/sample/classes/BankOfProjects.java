@@ -10,11 +10,6 @@ public class BankOfProjects {
     static List<Person.Teacher> allTeachers = new LinkedList<>();
     static String nameOnline = "";
     static Person OnlineUser;
-    static String textPeople = "";
-    static String textProject = "";
-    static String namesOfProjects = "";
-    static String namesOfMembers = "";
-    static String projectsOfPerson = "";
 
     //admin login: totally, password: spice
     static Person.Teacher admin = new Person.Teacher("totally","0",
@@ -39,7 +34,7 @@ public class BankOfProjects {
             "Март 2020 - август 2020", "Журналы, конференции");
 
 
-    static public void addSomePeople() {
+    public void addSomePeople() {
         allPeople.add(admin);
         allPeople.add(person1);
         allPeople.add(person2);
@@ -52,30 +47,34 @@ public class BankOfProjects {
         allStudents.add(person4);
     }
 
-    static public void addSomeProjects(){
+    public void addSomeProjects(){
         allProjects.add(project1);
         allProjects.add(project2);
     }
 
-    static public void addSomeProjectsToPeople() {
-        addProjectToPerson(person1,project1);
-        addProjectToPerson(person2,project1);
-        addProjectToPerson(person2,project2);
-        addProjectToPerson(person3,project1);
+    public void addSomeProjectsToPeople() {
+        person1.addProjectToPerson(project1);
+        person3.addProjectToPerson(project1);
+        person2.addProjectToPerson(project2);
+        person4.addProjectToPerson(project2);
+        person4.addProjectToPerson(project1);
     }
 
-    static public void addSomeMembersToProjects() {
-        addPersonToProject(person1,project1);
-        addPersonToProject(person2,project1);
+    public void addSomeMembersToProjects() {
+        project1.addPersonToProject(person1);
+        project1.addPersonToProject(person3);
+        project2.addPersonToProject(person2);
+        project2.addPersonToProject(person4);
     }
 
-    static public void setOnlineUser(String onlineName, String onlinePassword) {
+    public void setOnlineUser(String onlineName, String onlinePassword) {
         for (Person part: allPeople) {
             if (part.name.equals(onlineName) && part.password.equals(onlinePassword)) OnlineUser = part;
         }
     }
 
-    static public String printAllPeople() {
+    public String printAllPeople() {
+        String textPeople = "";
         for (Person.Teacher man: allTeachers) {
             textPeople = textPeople + System.lineSeparator() + "Имя: " + man.name + System.lineSeparator()
                     + "Кафедра: " + man.faculty + System.lineSeparator() + "Должность: " + man.position
@@ -92,7 +91,8 @@ public class BankOfProjects {
         return textPeople;
     }
 
-    static public String printSearchForPerson(List<Person.Teacher> teachers, List<Person.Student> students) {
+    public String printSearchForPerson(List<Person.Teacher> teachers, List<Person.Student> students) {
+        String textPeople = "";
         for (Person.Teacher man: teachers) {
             textPeople = textPeople + System.lineSeparator() + "Имя: " + man.name + System.lineSeparator()
                     + "Кафедра: " + man.faculty + System.lineSeparator() + "Должность: " + man.position
@@ -109,7 +109,8 @@ public class BankOfProjects {
         return textPeople;
     }
 
-    static public String printAllProjects() {
+    public String printAllProjects() {
+        String textProject = "";
         for (Project project: allProjects) {
             textProject = textProject + System.lineSeparator() + "Название проекта: " + project.name + System.lineSeparator()
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
@@ -120,9 +121,9 @@ public class BankOfProjects {
         return textProject;
     }
 
-    static public String printAllProjectsOfPerson(Person person) {
+    public String printAllProjectsOfPerson(Person person) {
+        String projectsOfPerson = "";
         for (Project project: person.projects) {
-            projectsOfPerson = "";
             projectsOfPerson = projectsOfPerson + System.lineSeparator() + "Название проекта: " + project.name + System.lineSeparator()
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
                     + System.lineSeparator() + "Сроки: " + project.getDeadlines() + System.lineSeparator()
@@ -132,7 +133,8 @@ public class BankOfProjects {
         return projectsOfPerson;
     }
 
-    static public String printSearchForProject(List<Project> list) {
+    public String printSearchForProject(List<Project> list) {
+        String textProject = "";
         for (Project project: list) {
             textProject = textProject + System.lineSeparator() + "Название проекта: " + project.name + System.lineSeparator()
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
@@ -143,23 +145,23 @@ public class BankOfProjects {
         return textProject;
     }
 
-    static public String getProjectsNames (Person person) {
+    public String getProjectsNames (Person person) {
+        String namesOfProjects = "";
         for (Project project: person.projects) {
-            namesOfProjects = "";
             namesOfProjects = namesOfProjects + project.name + System.lineSeparator();
         }
         return namesOfProjects;
     }
 
-    static public String getMembersNames (Project project) {
+    public String getMembersNames (Project project) {
+        String namesOfMembers = "";
         for (Person person: project.members) {
-            namesOfMembers = "";
-            namesOfMembers = namesOfProjects + person.name + System.lineSeparator();
+            namesOfMembers = namesOfMembers + person.name + System.lineSeparator();
         }
         return namesOfMembers;
     }
 
-    static public List<Person.Teacher> tTagSearch(String pTag) {
+    public List<Person.Teacher> tTagSearch(String pTag) {
         List<Person.Teacher> taggedTeachers = new LinkedList<>();
         for (Person.Teacher part: allTeachers) {
             if (part.tags.contains(pTag)) {
@@ -169,7 +171,7 @@ public class BankOfProjects {
         return taggedTeachers;
     }
 
-    static public List<Person.Student> sTagSearch(String pTag) {
+    public List<Person.Student> sTagSearch(String pTag) {
         List<Person.Student> taggedStudents = new LinkedList<>();
         for (Person.Student part: allStudents) {
             if (part.tags.contains(pTag)) {
@@ -179,7 +181,7 @@ public class BankOfProjects {
         return taggedStudents;
     }
 
-    static public List<Person.Teacher> tNameSearch(String pName) {
+    public List<Person.Teacher> tNameSearch(String pName) {
         List<Person.Teacher> teachers = new LinkedList<>();
         for (Person.Teacher part: allTeachers) {
             if (part.name.contains(pName)) {
@@ -189,7 +191,7 @@ public class BankOfProjects {
         return teachers;
     }
 
-    static public List<Person.Student> sNameSearch(String pName) {
+    public List<Person.Student> sNameSearch(String pName) {
         List<Person.Student> students = new LinkedList<>();
         for (Person.Student part: allStudents) {
             if (part.name.contains(pName)) {
@@ -199,7 +201,7 @@ public class BankOfProjects {
         return students;
     }
 
-    static public List<Project> prNameSearch(String prName) {
+    public List<Project> prNameSearch(String prName) {
         List<Project>  Projects = new LinkedList<>();
         for (Project part: allProjects)
             if (part.name.contains(prName)) {
@@ -208,7 +210,7 @@ public class BankOfProjects {
         return Projects;
     }
 
-    static public List<Project> prTagSearch(String prTag) {
+    public List<Project> prTagSearch(String prTag) {
         List<Project> taggedProjects = new LinkedList<>();
         for (Project part : allProjects) {
             if (part.tags.contains(prTag)) {
@@ -218,27 +220,23 @@ public class BankOfProjects {
         return taggedProjects;
     }
 
-    static public void createProject(String prName, String prPurpose, String prTasks,
+    public void createProject(String prName, String prPurpose, String prTasks,
                               String prDeadlines, String prResources) {
         Project project = new Project(prName,prPurpose, prTasks,prDeadlines,prResources);
         allProjects.add(project);
     }
-    static public void createTeacher(String pName, String pFaculty, String pPosition, String pPassword) {
+
+    public void createTeacher(String pName, String pFaculty, String pPosition, String pPassword) {
         Person.Teacher teacher = new Person.Teacher(pName, pFaculty, pPosition, pPassword);
         allTeachers.add(teacher);
     }
-    static public void createStudent(String pName, String pCourse, String pGroup,
+
+    public void createStudent(String pName, String pCourse, String pGroup,
                               String pInst, String pPassword, String pBranch) {
         Person.Student student = new Person.Student(pName, pCourse, pGroup, pInst, pPassword, pBranch);
         allStudents.add(student);
     }
-    static public void addProjectToPerson (Person person, Project project) {
-        person.projects.add(project);
-    }
 
-    static public void addPersonToProject (Person person, Project project) {
-        project.members.add(person);
-    }
 
 
 }

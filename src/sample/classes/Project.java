@@ -39,7 +39,11 @@ public class Project {
         resources = prResources;
     }
 
-    static public void addTag(Project project, String newTag) {
-        project.tags.add(newTag);
+    public void addTag(String newTag) {
+        tags.add(newTag);
+    }
+
+    public void addPersonToProject (Person person) {
+        members.add(person);
     }
 }

@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Person {
-    static List<Project> projects = new LinkedList<>();
-    static List<String> tags = new LinkedList<>();
+    List<Project> projects = new LinkedList<>();
+    List<String> tags = new LinkedList<>();
     String name;
     String password;
     public String getName() {
@@ -37,5 +37,13 @@ public class Person {
             position = pPosition;
             password = pPassword;
         }
+    }
+
+    public void addProjectToPerson (Project project) {
+        projects.add(project);
+    }
+
+    public void addTagToPerson (String value) {
+        tags.add(value);
     }
 }

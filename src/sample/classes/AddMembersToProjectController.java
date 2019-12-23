@@ -2,7 +2,8 @@ package sample.classes;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+import java.util.LinkedList;
+import java.util.List;
 import javafx.scene.control.ComboBox;
 
 public class AddMembersToProjectController {
@@ -21,8 +22,16 @@ public class AddMembersToProjectController {
                 controller.openNewWindow("/sample/fxmls/mainWindow.fxml", createProjectButton)
         );
         for (Person man: bankOfProjects.allPeople) choiceOfPersons.getItems().add(man.name);
+    }
 
+    public void addPersonToNewProject () {
+        for (Person person: bankOfProjects.allPeople){
+            if (person.name == choiceOfPersons.getValue()) {
+                bankOfProjects.allProjects.get(bankOfProjects.allProjects.size()-1).addPersonToProject(person);
+                person.addProjectToPerson(bankOfProjects.allProjects.get(bankOfProjects.allProjects.size()-1));
+            }
 
+        }
     }
 
 

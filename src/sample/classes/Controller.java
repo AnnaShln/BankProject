@@ -29,10 +29,6 @@ public class Controller{
 
     @FXML
     void initialize() {
-        bankOfProjects.addSomePeople();
-        bankOfProjects.addSomeProjects();
-        bankOfProjects.addSomeProjectsToPeople();
-        bankOfProjects.addSomeMembersToProjects();
         startRegistration.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/registration.fxml", startRegistration)
         );

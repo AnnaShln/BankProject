@@ -17,5 +17,8 @@ public class ShowMyProjectsController {
     @FXML
     public void initialize() {
         textMyProjects.setText(bankOfProjects.printAllProjectsOfPerson(bankOfProjects.OnlineUser));
+        addProjectButton.setOnAction(event ->
+                controller.openNewWindow("/sample/fxmls/addProjectToOnlinePerson.fxml", addProjectButton)
+        );
     }
 }

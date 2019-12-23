@@ -134,7 +134,7 @@
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="addTag" layoutX="258.0" layoutY="121.0" mnemonicParsing="false" onAction="#addTagToPerson" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7dec5">
+            <Button fx:id="addTag" layoutX="258.0" layoutY="121.0" mnemonicParsing="false" onAction="#addTagToPersonOnline" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7dec5">
                <font>
                   <Font size="24.0" />
                </font>
