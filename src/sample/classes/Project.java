@@ -68,6 +68,9 @@ public class Project {
 
     public void addTag(Project project, String newTag) {
         project.tags.add(newTag);
+        for (Person part: members) {
+            part.tags.add(newTag);
+        }
     }
 
     //отложим пока PrintInfo
