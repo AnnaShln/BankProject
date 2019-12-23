@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.AddProjectToOnlinePersonController">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="650.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
+            <children>
+                <Button fx:id="endAddingProjects" layoutX="578.0" layoutY="535.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Завершить" textFill="#f7f9f2">
+                    <font>
+                        <Font name="Calibri" size="24.0" />
+                    </font>
+                </Button>
+                <Text fill="WHITE" layoutX="151.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите проект из списка и нажмите кнопку &quot;Добавить&quot;, чтобы присоединиться к проекту. После выбора всех заинтересовавших Вас проектов нажмите кнопку &quot;Завершить&quot;" wrappingWidth="321.38671875">
+                    <font>
+                        <Font name="Calibri" size="24.0" />
+                    </font>
+                </Text>
+                <ComboBox fx:id="choiceOfProjects" layoutX="531.0" layoutY="74.0" prefHeight="26.0" prefWidth="338.0" />
+                <Button fx:id="addProjectsToOnlinePersonButton" layoutX="577.0" layoutY="479.0" mnemonicParsing="false" onAction="#addProjectsToOnlinePerson" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7f9f2">
+                    <font>
+                        <Font name="Calibri" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Text fill="#783524" layoutX="499.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Новый Проект" wrappingWidth="402.91253662109375">
+            <font>
+                <Font name="Calibri Bold" size="64.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

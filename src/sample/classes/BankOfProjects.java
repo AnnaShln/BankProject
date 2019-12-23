@@ -12,26 +12,37 @@ public class BankOfProjects {
     static Person OnlineUser;
 
     //admin login: totally, password: spice
-    static Person.Teacher admin = new Person.Teacher("totally","0",
-            "0","spice");
-    static Person.Teacher person1 = new Person.Teacher("Иванов Иван Геннадьевич",
+    static Person.Teacher admin = new Person.Teacher("totally","admin",
+            "admin","spice");
+
+    List<String> tagsForProject1 = new LinkedList<>();
+    List<String> tagsForProject2 = new LinkedList<>();
+
+    public void addValuesToTagList(){
+        tagsForProject1.add("Хороший");
+        tagsForProject1.add("Душевный");
+        tagsForProject2.add("С пивком потянет");
+        tagsForProject2.add("Кто-нибудь доделайте");
+    }
+
+    Person.Teacher person1 = new Person.Teacher("Иванов Иван Геннадьевич",
             "Высшая школа общественных наук", "Доцент", "ivanovivan");
-    static Person.Teacher person2 = new Person.Teacher("Абакумова Галина Сергеевна",
+    Person.Teacher person2 = new Person.Teacher("Абакумова Галина Сергеевна",
             "Лаборатория \"Лазерные и плазменные технологии\"", "Ведущий инженер",
             "abakumovagalina");
-    static Person.Student person3 = new Person.Student("Козлов Михаил Владимирович", "3",
+    Person.Student person3 = new Person.Student("Козлов Михаил Владимирович", "3",
             "3630706/50001", "Гуманитарный институт", "kozlovmikhail", "Юриспруденция");
-    static Person.Student person4 = new Person.Student("Абрамова Юлия Григорьевна", "5",
+    Person.Student person4 = new Person.Student("Абрамова Юлия Григорьевна", "5",
             "3130309/20002", "Институт физики, нанотехнологий и телекоммуникаций", "abramovajulia",
             "Техническая физика");
-    static Project project1 = new Project("Суперкомпьютеры и их применение",
+    Project project1 = new Project("Суперкомпьютеры и их применение",
             "Спрогнозировать дальнейшее развитие суперкомпьютерных технологий",
             "Исследовать поколения суперкомпьютеров, рассмотреть различные сферы применения суперкомпьютеров",
-            "Декабрь 2020", "Интернет");
-    static Project project2 = new Project("Внедрение компьютерных технологий в образовательную среду",
+            "Декабрь 2020", "Интернет", tagsForProject1);
+    Project project2 = new Project("Внедрение компьютерных технологий в образовательную среду",
             "Изучить успешность внедрения компьютерных технологий в образовательную среду",
             "Рассмотреть преимущества и недостатки использования компьютерных технологий в образовании",
-            "Март 2020 - август 2020", "Журналы, конференции");
+            "Март 2020 - август 2020", "Журналы, конференции", tagsForProject2);
 
 
     public void addSomePeople() {
@@ -50,6 +61,12 @@ public class BankOfProjects {
     public void addSomeProjects(){
         allProjects.add(project1);
         allProjects.add(project2);
+    }
+
+    public void addSomeTagsToProjects(){
+        project1.addTag("Информатика");
+        project1.addTag("Искусственный интеллект");
+        project2.addTag("Социальный опрос");
     }
 
     public void addSomeProjectsToPeople() {
@@ -116,6 +133,7 @@ public class BankOfProjects {
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
                     + System.lineSeparator() + "Сроки: " + project.getDeadlines() + System.lineSeparator()
                     + "Необходимые ресурсы: " + project.getResources() + System.lineSeparator()
+                    + "Теги: " + project.tags + System.lineSeparator()
                     + "Участники проекта: " + getMembersNames(project) + System.lineSeparator();
         }
         return textProject;
@@ -128,6 +146,7 @@ public class BankOfProjects {
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
                     + System.lineSeparator() + "Сроки: " + project.getDeadlines() + System.lineSeparator()
                     + "Необходимые ресурсы: " + project.getResources() + System.lineSeparator()
+                    + "Теги: " + project.tags + System.lineSeparator()
                     + "Участники проекта: " + getMembersNames(project) + System.lineSeparator();
         }
         return projectsOfPerson;
@@ -140,6 +159,7 @@ public class BankOfProjects {
                     + "Цели: " + project.getPurpose() + System.lineSeparator() + "Задачи: " + project.tasks
                     + System.lineSeparator() + "Сроки: " + project.getDeadlines() + System.lineSeparator()
                     + "Необходимые ресурсы: " + project.getResources() + System.lineSeparator()
+                    + "Теги: " + project.tags + System.lineSeparator()
                     + "Участники проекта: " + getMembersNames(project) + System.lineSeparator();
         }
         return textProject;
@@ -221,8 +241,8 @@ public class BankOfProjects {
     }
 
     public void createProject(String prName, String prPurpose, String prTasks,
-                              String prDeadlines, String prResources) {
-        Project project = new Project(prName,prPurpose, prTasks,prDeadlines,prResources);
+                              String prDeadlines, String prResources, List<String> prtags) {
+        Project project = new Project(prName,prPurpose, prTasks,prDeadlines,prResources, prtags);
         allProjects.add(project);
     }
 
@@ -237,6 +257,9 @@ public class BankOfProjects {
         allStudents.add(student);
     }
 
-
-
+    public List<String> listOfTags (String string) {
+        List<String> resultOfTags = new LinkedList<>();
+        for (String part: string.split(", ")) resultOfTags.add(part);
+        return resultOfTags;
+    }
 }

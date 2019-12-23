@@ -31,12 +31,13 @@ public class Project {
 
     //конструктор:
     Project (String prName,String prPurpose, String prTasks,
-                                  String prDeadlines, String prResources) {
+                                  String prDeadlines, String prResources, List<String> prTags) {
         name = prName;
         purpose = prPurpose;
         tasks = prTasks;
         deadlines = prDeadlines;
         resources = prResources;
+        tags = prTags;
     }
 
     public void addTag(String newTag) {

@@ -23,6 +23,9 @@ public class CreateProjectController {
     private TextArea tasksField;
 
     @FXML
+    private TextArea tagField;
+
+    @FXML
     private TextArea resourcesField;
 
     private UtilController controller = UtilController.getInstance();
@@ -32,7 +35,7 @@ public class CreateProjectController {
     void initialize() {
         continueCreateProjectButton.setOnAction(event -> {
             bankOfProjects.createProject(nameFieldProject.getText(), purposesField.getText(), tasksField.getText(), deadlinesField.getText(),
-                    resourcesField.getText());
+                    resourcesField.getText(),bankOfProjects.listOfTags(tagField.getText()));
             controller.openNewWindow("/sample/fxmls/addMembersToProject.fxml", continueCreateProjectButton);
         });
     }
