@@ -4,25 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Person {
+    static List<Project> projects = new LinkedList<>();
+    static List<String> tags = new LinkedList<>();
     String name;
     String password;
-    List<Project> projects = new LinkedList<>();
-    List<String> tags = new LinkedList<>();
     public String getName() {
         return name;
     }
-    public List<Project> getProjects() {
-        return projects;
-    }
-    public List<String> getTags() {
-        return tags;
-    }
-    public void addTag(String pTag) {
-        tags.add(pTag);
-    }
-    public void addProject(Project pProject) {
-        projects.add(pProject);
-    }
+
     public static class Student extends Person {
         String branch;
         String course;
@@ -49,11 +38,4 @@ public class Person {
             password = pPassword;
         }
     }
-    public void removeProject(Project pProject) {
-        int index = projects.indexOf(pProject);
-        projects.remove(index);
-    }
-
-    //нужно создать функцию для записи списка проектов в файл
-
 }

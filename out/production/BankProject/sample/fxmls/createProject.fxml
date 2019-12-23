@@ -16,32 +16,32 @@
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button fx:id="createProjectButton" layoutX="578.0" layoutY="578.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Создать" textFill="#f7f9f2">
+                <Button fx:id="continueCreateProjectButton" layoutX="578.0" layoutY="578.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Продолжить" textFill="#f7f9f2">
                     <font>
                         <Font name="Calibri" size="24.0" />
                     </font>
                 </Button>
-            <TextField fx:id="statusField" layoutX="101.0" layoutY="168.0" prefHeight="51.0" prefWidth="512.0" promptText="Статус (напр. в разработке)" style="-fx-background-color: #f7f9f2;">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </TextField>
             <TextField fx:id="deadlinesField" layoutX="796.0" layoutY="58.0" prefHeight="51.0" prefWidth="512.0" promptText="Сроки" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <TextArea fx:id="purposesField" layoutX="101.0" layoutY="283.0" prefHeight="264.0" prefWidth="512.0" promptText="Цели проекта">
+            <TextArea fx:id="purposesField" layoutX="101.0" layoutY="164.0" prefHeight="166.0" prefWidth="512.0" promptText="Цели проекта" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextArea>
-            <TextArea fx:id="tasksField" layoutX="796.0" layoutY="164.0" prefHeight="166.0" prefWidth="512.0" promptText="Поставленные задачи">
+            <TextArea fx:id="tasksField" layoutX="796.0" layoutY="164.0" prefHeight="166.0" prefWidth="512.0" promptText="Поставленные задачи" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextArea>
-            <TextArea fx:id="resourcesField" layoutX="796.0" layoutY="383.0" prefHeight="166.0" prefWidth="512.0" promptText="Необходимые ресурсы">
+            <TextArea fx:id="resourcesField" layoutX="796.0" layoutY="383.0" prefHeight="166.0" prefWidth="512.0" promptText="Необходимые ресурсы" style="-fx-background-color: #f7f9f2;">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="tagField" layoutX="101.0" layoutY="383.0" prefHeight="166.0" prefWidth="512.0" promptText="Теги проекта (перечислите через запятую)" style="-fx-background-color: #f7f9f2;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
