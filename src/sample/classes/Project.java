@@ -50,6 +50,9 @@ public class Project {
 
     public void addMember(Person member) {
         members.add(member);
+        for (String part: tags) {
+            member.tags.add(part);
+        }
     }
     public void changeStatus(String newStatus) {
         status = newStatus;
