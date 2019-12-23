@@ -5,10 +5,6 @@ import javafx.scene.control.*;
 
 public class RegistrationController {
 
-    private UtilController controller = UtilController.getInstance();
-    String newPersonName;
-    String newPersonPassword;
-
     @FXML
     private TextField loginRegistration;
 
@@ -24,15 +20,19 @@ public class RegistrationController {
     @FXML
     private RadioButton radioTeacher;
 
+    private UtilController controller = UtilController.getInstance();
+    static String newPersonName;
+    static String newPersonPassword;
+
     @FXML
     void initialize() {
         continueRegistration.setOnAction(event -> {
+            newPersonName = loginRegistration.getText();
+            newPersonPassword = passwordRegistration.getText();
             if (radioTeacher.isSelected()) controller.
                     openNewWindow("/sample/fxmls/teacherRegistration.fxml", continueRegistration);
             if (radioStudent.isSelected()) controller.
                     openNewWindow("/sample/fxmls/studentRegistration.fxml", continueRegistration);
-            newPersonName = loginRegistration.getText();
-            newPersonPassword = passwordRegistration.getText();
         });
     }
 

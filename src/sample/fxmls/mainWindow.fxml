@@ -12,32 +12,32 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: #783524;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.MainWindowController">
     <children>
-        <AnchorPane layoutY="176.0" prefHeight="580.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
+        <AnchorPane layoutX="-3.0" layoutY="176.0" prefHeight="580.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
          <children>
-            <TextField fx:id="fieldForSearch" layoutX="36.0" layoutY="33.0" prefHeight="44.0" prefWidth="600.0" promptText="Поиск" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="fieldForSearchForProject" layoutX="36.0" layoutY="33.0" prefHeight="44.0" prefWidth="600.0" promptText="Поиск Проекта" style="-fx-background-color: #f7dec5;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="buttonForSearch" layoutX="650.0" layoutY="33.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #f7dec5;" text="Поиск" textAlignment="CENTER" textFill="#783524">
+            <Button fx:id="buttonForSearchProject" layoutX="639.0" layoutY="33.0" mnemonicParsing="false" onAction="#searchForProject" prefHeight="44.0" prefWidth="100.0" style="-fx-background-color: #f7dec5;" text="Поиск" textAlignment="CENTER" textFill="#783524">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Button>
-            <RadioButton layoutX="39.0" layoutY="89.0" mnemonicParsing="false" text="По имени" textFill="#783524">
+            <RadioButton fx:id="searchForName" layoutX="39.0" layoutY="89.0" mnemonicParsing="false" text="По названию" textFill="#783524">
                <font>
-                  <Font name="Calibri" size="24.0" />
+                  <Font name="Calibri" size="18.0" />
                </font>
                <toggleGroup>
                   <ToggleGroup fx:id="searchGroup" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="232.0" layoutY="88.0" mnemonicParsing="false" text="По тегу" textFill="#783524" toggleGroup="$searchGroup">
+            <RadioButton fx:id="searchForTag" layoutX="211.0" layoutY="89.0" mnemonicParsing="false" text="По тегу" textFill="#783524" toggleGroup="$searchGroup">
                <font>
-                  <Font name="Calibri" size="24.0" />
+                  <Font name="Calibri" size="18.0" />
                </font>
             </RadioButton>
-            <Label layoutX="43.0" layoutY="137.0" prefHeight="51.0" prefWidth="169.0" text="Проекты" textFill="#783524">
+            <Label layoutX="47.0" layoutY="137.0" prefHeight="51.0" prefWidth="169.0" text="Проекты" textFill="#783524">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -55,6 +55,57 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
+            <Label layoutX="897.0" layoutY="138.0" prefHeight="51.0" prefWidth="169.0" text="Участники" textFill="#783524">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="889.0" layoutY="190.0" maxWidth="450.0" prefHeight="350.0" prefWidth="450.0" style="-fx-background-color: #f7dec5;">
+               <content>
+                  <AnchorPane maxWidth="450.0" minHeight="0.0" minWidth="0.0" prefWidth="450.0" style="-fx-background-color: #f7dec5;">
+                     <children>
+                        <Text fx:id="textPerson" fill="#783524" layoutX="11.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="436.7999267578125">
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <RadioButton fx:id="searchForPersonTag" layoutX="897.0" layoutY="89.0" mnemonicParsing="false" text="По тегу" textFill="#783524">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="searchGroup2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="searchForPersonName" layoutX="1041.0" layoutY="89.0" mnemonicParsing="false" text="По имени" textFill="#783524" toggleGroup="$searchGroup2">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="fieldForSearchForPerson" layoutX="882.0" layoutY="33.0" prefHeight="44.0" prefWidth="390.0" promptText="Поиск Участника" style="-fx-background-color: #f7dec5;">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </TextField>
+            <Button fx:id="buttonForSearchForPerson" layoutX="1278.0" layoutY="33.0" mnemonicParsing="false" onAction="#searchPerson" prefHeight="44.0" prefWidth="100.0" style="-fx-background-color: #f7dec5;" text="Поиск" textAlignment="CENTER" textFill="#783524">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="showAllProjects" layoutX="443.0" layoutY="150.0" mnemonicParsing="false" onAction="#showAllProjects" prefHeight="14.0" prefWidth="196.0" style="-fx-background-color: #f7dec5;" text="Показать все проекты" textAlignment="CENTER" textFill="#783524">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="showAllPersonsButton" layoutX="1114.0" layoutY="148.0" mnemonicParsing="false" onAction="#showAllPersons" prefHeight="14.0" prefWidth="223.0" style="-fx-background-color: #f7dec5;" text="Показать всех участников" textAlignment="CENTER" textFill="#783524">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
         <Label layoutX="28.0" layoutY="19.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#dfb08b">
             <font>
@@ -68,12 +119,12 @@
       </Button>
       <AnchorPane layoutX="696.0" layoutY="1.0" prefHeight="175.0" prefWidth="412.0" style="-fx-background-color: #dfb08b;">
          <children>
-            <Text fx:id="nameInMainWindow" fill="#783524" layoutX="24.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="363.2">
+            <Text fx:id="nameInMainWindow" fill="#783524" layoutX="24.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="363.2">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="myProject" layoutX="13.0" layoutY="62.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #783524;" text="Мои проекты" textFill="#f7dec5">
+            <Button fx:id="myProjects" layoutX="13.0" layoutY="62.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #783524;" text="Мои проекты" textFill="#f7dec5">
                <font>
                   <Font size="24.0" />
                </font>
@@ -83,7 +134,7 @@
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="addTag" layoutX="258.0" layoutY="121.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7dec5">
+            <Button fx:id="addTag" layoutX="258.0" layoutY="121.0" mnemonicParsing="false" onAction="#addTagToPerson" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7dec5">
                <font>
                   <Font size="24.0" />
                </font>

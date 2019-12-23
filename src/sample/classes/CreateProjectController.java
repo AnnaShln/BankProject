@@ -7,17 +7,11 @@ import javafx.scene.control.TextField;
 
 public class CreateProjectController {
 
-    private UtilController controller = UtilController.getInstance();
-    BankOfProjects bankOfProjects = new BankOfProjects();
-
     @FXML
     private TextField nameFieldProject;
 
     @FXML
-    private Button createProjectButton;
-
-    @FXML
-    private TextField statusField;
+    private Button continueCreateProjectButton;
 
     @FXML
     private TextField deadlinesField;
@@ -31,13 +25,15 @@ public class CreateProjectController {
     @FXML
     private TextArea resourcesField;
 
+    private UtilController controller = UtilController.getInstance();
+    BankOfProjects bankOfProjects = new BankOfProjects();
+
     @FXML
     void initialize() {
-        createProjectButton.setOnAction(event -> {
-            controller.openNewWindow("/sample/fxmls/mainWindow.fxml", createProjectButton);
-            bankOfProjects.createProject(nameFieldProject.getText(), purposesField.getText(),
-                    statusField.getText(), tasksField.getText(), deadlinesField.getText(),
+        continueCreateProjectButton.setOnAction(event -> {
+            bankOfProjects.createProject(nameFieldProject.getText(), purposesField.getText(), tasksField.getText(), deadlinesField.getText(),
                     resourcesField.getText());
+            controller.openNewWindow("/sample/fxmls/addMembersToProject.fxml", continueCreateProjectButton);
         });
     }
 

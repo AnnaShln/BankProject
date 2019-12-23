@@ -2,12 +2,41 @@ package sample.classes;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class MainWindowController {
 
-    private UtilController controller = UtilController.getInstance();
+
+    @FXML
+    private TextField fieldForSearchForProject;
+
+    @FXML
+    private Button buttonForSearchProject;
+
+    @FXML
+    private RadioButton searchForName;
+
+    @FXML
+    private RadioButton searchForTag;
+
+    @FXML
+    private Text textProjects;
+
+    @FXML
+    private Text textPerson;
+
+    @FXML
+    private RadioButton searchForPersonTag;
+
+    @FXML
+    private RadioButton searchForPersonName;
+
+    @FXML
+    private TextField fieldForSearchForPerson;
 
     @FXML
     private Button logOut;
@@ -16,25 +45,75 @@ public class MainWindowController {
     private Text nameInMainWindow;
 
     @FXML
-    private Text textProjects;
+    private Button myProjects;
+
+    @FXML
+    private TextField tagField;
+
+    @FXML
+    private Button addTag;
 
     @FXML
     private Button createProject;
 
-    String text = "Calmness is a quality that can be cultivated and increased with practice,[7] or developed through psychotherapy.[8] It usually takes a trained mind to stay calm in the face of a great deal of different stimulation, and possible distractions, especially emotional ones. The negative emotions are the greatest challenge to someone who is attempting to cultivate a calm mind. Some disciplines that promote and develop calmness are prayer, yoga, relaxation training, breath training, and meditation. Jon Kabat-Zinn states that “Concentration is a cornerstone of mindfulness practice. Your mindfulness will only be as robust as the capacity of your mind to be calm and stable. Without calmness, the mirror of mindfulness will have an agitated and choppy surface and will not be able to reflect things with any accuracySarah Wilson recommends reducing one’s exposure to choices/decisions as a route to calmAnother term usually associated with calmness is \"peace\".[11] A mind that is at peace or calm will cause the brain to produce \"good\" hormones, which in turn give the person a stable emotional state and promote good health in every area of life, including marriage.[12] Seeing the rise in crime and diseases around the world which are more often than not the consequences of the emotions going 'out-of-control',[13] it is therefore considered beneficial for many to stay calm and cultivate it in every possible situation, especially during stressful events such as demise of a family member or failure in business.";
+    private UtilController controller = UtilController.getInstance();
+    static BankOfProjects bankOfProjects = new BankOfProjects();
 
     @FXML
     void initialize() {
+        nameInMainWindow.setText(bankOfProjects.nameOnline);
+        textProjects.setText(bankOfProjects.printAllProjects());
+        textPerson.setText(bankOfProjects.printAllPeople());
         logOut.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/start.fxml", logOut)
         );
         createProject.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/createProject.fxml", createProject)
         );
+        myProjects.setOnAction(event ->
+                controller.openNewWindow("/sample/fxmls/showMyProjects.fxml", myProjects)
+        );
 
-        //nameInMainWindow.setText(start.bankOfProjects.OnlineUser.name);
-        textProjects.setText(text);
     }
+
+    public void addTagToPerson() {
+    //    for (Person man: bankOfProjects.allPeople) {
+    //        if (man.name.equals(bankOfProjects.nameOnline)) bankOfProjects.addTag(man,tagField.getText());
+    //    }
+    }
+
+    public void searchForProject() {
+        String value = fieldForSearchForProject.getText();
+        List<Project> resultOfSearch = new LinkedList<>();
+        if (searchForName.isSelected()) resultOfSearch = bankOfProjects.prNameSearch(value);
+        if (searchForTag.isSelected()) resultOfSearch = bankOfProjects.prTagSearch(value);
+        textProjects.setText(bankOfProjects.printSearchForProject(resultOfSearch));
+    }
+
+    public void searchPerson() {
+        String value = fieldForSearchForPerson.getText();
+        List<Person.Teacher> resultOfSearchTeacher = new LinkedList<>();
+        List<Person.Student> resultOfSearchStudent = new LinkedList<>();
+        if (searchForPersonName.isSelected()) {
+            resultOfSearchTeacher = bankOfProjects.tNameSearch(value);
+            resultOfSearchStudent = bankOfProjects.sNameSearch(value);
+        }
+        if (searchForPersonTag.isSelected()) {
+            resultOfSearchTeacher = bankOfProjects.tTagSearch(value);
+            resultOfSearchStudent = bankOfProjects.sTagSearch(value);
+        }
+        textPerson.setText(bankOfProjects.printSearchForPerson(resultOfSearchTeacher, resultOfSearchStudent));
+    }
+
+    public void showAllProjects() {
+        textProjects.setText(bankOfProjects.printAllProjects());
+    }
+
+    public void showAllPersons() {
+        textPerson.setText(bankOfProjects.printAllPeople());
+    }
+
+
 
 
 }
