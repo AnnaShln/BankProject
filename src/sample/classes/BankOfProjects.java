@@ -249,12 +249,14 @@ public class BankOfProjects {
     public void createTeacher(String pName, String pFaculty, String pPosition, String pPassword) {
         Person.Teacher teacher = new Person.Teacher(pName, pFaculty, pPosition, pPassword);
         allTeachers.add(teacher);
+        allPeople.add(teacher);
     }
 
     public void createStudent(String pName, String pCourse, String pGroup,
                               String pInst, String pPassword, String pBranch) {
         Person.Student student = new Person.Student(pName, pCourse, pGroup, pInst, pPassword, pBranch);
         allStudents.add(student);
+        allPeople.add(student);
     }
 
     public List<String> listOfTags (String string) {
