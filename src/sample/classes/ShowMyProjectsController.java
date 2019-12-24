@@ -9,6 +9,9 @@ public class ShowMyProjectsController {
     private Button addProjectButton;
 
     @FXML
+    private Button backToMainWindow;
+
+    @FXML
     private Text textMyProjects;
 
     private UtilController controller = UtilController.getInstance();
@@ -19,6 +22,9 @@ public class ShowMyProjectsController {
         textMyProjects.setText(bankOfProjects.printAllProjectsOfPerson(bankOfProjects.OnlineUser));
         addProjectButton.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/addProjectToOnlinePerson.fxml", addProjectButton)
+        );
+        backToMainWindow.setOnAction(event ->
+                controller.openNewWindow("/sample/fxmls/mainWindow.fxml", backToMainWindow)
         );
     }
 }

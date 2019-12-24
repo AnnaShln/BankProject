@@ -6,33 +6,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: #783524;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.TeacherRegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.TeacherRegistrationController">
     <children>
-        <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
+        <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
             <children>
-                <TextField fx:id="facultyField" layoutX="444.0" layoutY="137.0" prefHeight="51.0" prefWidth="512.0" promptText="Кафедра" style="-fx-background-color: #f7dec5;">
+                <TextField fx:id="facultyField" layoutX="444.0" layoutY="137.0" prefHeight="51.0" prefWidth="512.0" promptText="Кафедра" style="-fx-background-color: white;">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button fx:id="finishRegistration2" layoutX="578.0" layoutY="312.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
+                <Button fx:id="finishRegistration2" layoutX="578.0" layoutY="312.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="WHITE">
                     <font>
                         <Font name="Calibri" size="24.0" />
                     </font>
                 </Button>
-                <Label layoutX="603.0" layoutY="57.0" prefHeight="44.0" prefWidth="193.0" text="Регистрация" textFill="#783524">
+                <Label layoutX="603.0" layoutY="57.0" prefHeight="44.0" prefWidth="193.0" text="Регистрация" textFill="WHITE">
                     <font>
                         <Font name="Calibri" size="36.0" />
                     </font>
                 </Label>
-            <TextField fx:id="positionField" layoutX="444.0" layoutY="226.0" prefHeight="51.0" prefWidth="512.0" promptText="Должность" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="positionField" layoutX="444.0" layoutY="226.0" prefHeight="51.0" prefWidth="512.0" promptText="Должность" style="-fx-background-color: white;">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </TextField>
             </children>
         </AnchorPane>
-        <Label layoutX="518.0" layoutY="49.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#dfb08b">
+        <Label layoutX="518.0" layoutY="49.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#783524">
             <font>
                 <Font name="System Bold" size="48.0" />
             </font>
