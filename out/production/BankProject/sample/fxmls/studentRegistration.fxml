@@ -6,43 +6,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: #783524;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.StudentRegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.StudentRegistrationController">
     <children>
-        <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #dfb08b;">
+        <AnchorPane layoutY="180.0" prefHeight="570.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
             <children>
-            <TextField fx:id="groupField" layoutX="444.0" layoutY="265.0" prefHeight="51.0" prefWidth="512.0" promptText="Номер группы" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="groupField" layoutX="444.0" layoutY="265.0" prefHeight="51.0" prefWidth="512.0" promptText="Номер группы" style="-fx-background-color: white;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-                <TextField fx:id="instituteField" layoutX="444.0" layoutY="106.0" prefHeight="51.0" prefWidth="512.0" promptText="Институт" style="-fx-background-color: #f7dec5;">
+                <TextField fx:id="instituteField" layoutX="444.0" layoutY="106.0" prefHeight="51.0" prefWidth="512.0" promptText="Институт" style="-fx-background-color: white;">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </TextField>
-                <Button fx:id="finishRegistration" layoutX="578.0" layoutY="445.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Зарегистрироваться" textFill="#dfb08b">
+                <Button fx:id="finishRegistration" layoutX="578.0" layoutY="445.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: white;" text="Зарегистрироваться" textFill="#783524">
                     <font>
                         <Font name="Calibri" size="24.0" />
                     </font>
                 </Button>
-                <Label layoutX="603.0" layoutY="36.0" prefHeight="44.0" prefWidth="193.0" text="Регистрация" textFill="#783524">
+                <Label layoutX="603.0" layoutY="36.0" prefHeight="44.0" prefWidth="193.0" text="Регистрация" textFill="WHITE">
                     <font>
                         <Font name="Calibri" size="36.0" />
                     </font>
                 </Label>
-            <TextField fx:id="branchField" layoutX="444.0" layoutY="184.0" prefHeight="51.0" prefWidth="512.0" promptText="Направление" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="branchField" layoutX="444.0" layoutY="184.0" prefHeight="51.0" prefWidth="512.0" promptText="Направление" style="-fx-background-color: white;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="courceField" layoutX="444.0" layoutY="346.0" prefHeight="51.0" prefWidth="512.0" promptText="Курс" style="-fx-background-color: #f7dec5;">
+            <TextField fx:id="courceField" layoutX="444.0" layoutY="346.0" prefHeight="51.0" prefWidth="512.0" promptText="Курс" style="-fx-background-color: white;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
             </children>
         </AnchorPane>
-        <Label layoutX="518.0" layoutY="47.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#dfb08b">
+        <Label layoutX="518.0" layoutY="47.0" prefHeight="82.0" prefWidth="363.0" text="Банк Проектов" textFill="#783524">
             <font>
                 <Font name="System Bold" size="48.0" />
             </font>

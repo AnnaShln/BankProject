@@ -62,8 +62,6 @@ public class MainWindowController {
     @FXML
     void initialize() {
         nameInMainWindow.setText(bankOfProjects.nameOnline);
-        textProjects.setText(bankOfProjects.printAllProjects());
-        textPerson.setText(bankOfProjects.printAllPeople());
         logOut.setOnAction(event ->
                 controller.openNewWindow("/sample/fxmls/start.fxml", logOut)
         );
@@ -74,12 +72,6 @@ public class MainWindowController {
                 controller.openNewWindow("/sample/fxmls/showMyProjects.fxml", myProjects)
         );
 
-    }
-
-    public void addTagToPerson() {
-    //    for (Person man: bankOfProjects.allPeople) {
-    //        if (man.name.equals(bankOfProjects.nameOnline)) bankOfProjects.addTag(man,tagField.getText());
-    //    }
     }
 
     public void searchForProject() {
@@ -113,7 +105,10 @@ public class MainWindowController {
         textPerson.setText(bankOfProjects.printAllPeople());
     }
 
-
-
-
+    public void addTagToPersonOnline() {
+        for (Person man: bankOfProjects.allPeople) {
+            if (man.name.equals(bankOfProjects.nameOnline)) bankOfProjects.OnlineUser.addTagToPerson(tagField.getText());
+            textPerson.setText(bankOfProjects.printAllPeople());
+        }
+    }
 }

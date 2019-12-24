@@ -10,7 +10,7 @@
     <children>
         <AnchorPane layoutY="100.0" prefHeight="650.0" prefWidth="1400.0" style="-fx-background-color: #406c35;">
             <children>
-                <Button fx:id="addProjectButton" layoutX="578.0" layoutY="535.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Добавить проект" textFill="#f7f9f2">
+                <Button fx:id="addProjectButton" layoutX="756.0" layoutY="533.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Добавить проект" textFill="#f7f9f2">
                     <font>
                         <Font name="Calibri" size="24.0" />
                     </font>
@@ -28,6 +28,11 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
+            <Button fx:id="backToMainWindow" layoutX="400.0" layoutY="533.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Назад" textFill="#f7f9f2">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
         <Text fill="#783524" layoutX="499.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мои Проекты" wrappingWidth="402.91253662109375">

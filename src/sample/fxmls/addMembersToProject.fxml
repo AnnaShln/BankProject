@@ -15,12 +15,17 @@
                         <Font name="Calibri" size="24.0" />
                     </font>
                 </Button>
-            <Text fill="WHITE" layoutX="151.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нажмите на человека из списка, чтобы добавить его в проект или сразу нажмите на кнопку &quot;Создать&quot;, чтобы создать проект без участников" wrappingWidth="321.38671875">
+            <Text fill="WHITE" layoutX="151.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите человека из списка и нажмите кнопку &quot;Добавить&quot;, чтобы добавить его в проект или сразу нажмите на кнопку &quot;Создать&quot;, чтобы создать проект без участников" wrappingWidth="321.38671875">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </Text>
             <ComboBox fx:id="choiceOfPersons" layoutX="531.0" layoutY="74.0" prefHeight="26.0" prefWidth="338.0" />
+            <Button layoutX="577.0" layoutY="479.0" mnemonicParsing="false" onAction="#addPersonToNewProject" prefHeight="44.0" prefWidth="244.0" style="-fx-background-color: #783524;" text="Добавить" textFill="#f7f9f2">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
         <Text fill="#783524" layoutX="499.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Новый Проект" wrappingWidth="402.91253662109375">
