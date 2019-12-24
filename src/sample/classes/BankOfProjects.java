@@ -241,8 +241,8 @@ public class BankOfProjects {
     }
 
     public void createProject(String prName, String prPurpose, String prTasks,
-                              String prDeadlines, String prResources, List<String> prtags) {
-        Project project = new Project(prName,prPurpose, prTasks,prDeadlines,prResources, prtags);
+                              String prDeadlines, String prResources, List<String> prTags) {
+        Project project = new Project(prName,prPurpose, prTasks,prDeadlines,prResources, prTags);
         allProjects.add(project);
     }
 

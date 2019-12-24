@@ -42,6 +42,13 @@ public class Project {
 
     public void addTag(String newTag) {
         tags.add(newTag);
+        for (Person part: members)
+        {
+            if (!(part.tags.contains(newTag)))
+            {
+                part.tags.add(newTag);
+            }
+        }
     }
 
     public void addPersonToProject (Person person) {

@@ -30,6 +30,13 @@ public class AddMembersToProjectController {
                 bankOfProjects.allProjects.get(bankOfProjects.allProjects.size()-1).addPersonToProject(person);
                 person.addProjectToPerson(bankOfProjects.allProjects.get(bankOfProjects.allProjects.size()-1));
             }
+            for (String newTag: bankOfProjects.allProjects.get(bankOfProjects.allProjects.size()-1).tags)
+            {
+                if (!(person.tags.contains(newTag)))
+                {
+                    person.tags.add(newTag);
+                }
+            }
 
         }
     }
